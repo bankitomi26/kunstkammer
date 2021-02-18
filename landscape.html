@@ -1,182 +1,166 @@
-<!doctype html>
-<html class="no-js">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Customer.io - jQuery Form Plugin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
 
-  <!-- CIO Form Styles:
-    Include this piece of CSS if you would like to use our form styles -->
-  <link rel="stylesheet" href="css/cio-form-styles.css">
+  <title>Modern Business - Start Bootstrap Template</title>
 
-  <style>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    html,
-    body {
-      font-family: "Helvetica Neue", "Helvetica", "Arial";
-      font-size: 14px;
-      line-height: 1.64em;
-      color: #444;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #f9f9f9;
-      padding: 60px 16px 16px;
-    }
-
-    * {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-
-    .custom-form-styles {
-      box-shadow: 0 2px 2px rgba( 0, 0, 0, 0.12 );
-      max-width: 540px;
-      margin: 0 auto;
-
-      -webkit-transform: translateZ( 0 );
-      -moz-transform: translateZ( 0 );
-      transform: translateZ( 0 );
-    }
-
-    .custom-form-styles header {
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    .custom-form-styles header h3 {
-      color: #666;
-      font-size: 1.8em;
-      line-height: 1.2em;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    .custom-form-styles hr {
-      background-color: #eee;
-      border: none;
-      height: 1px;
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-
-    .form-success {
-      display: none;
-    }
-
-    .user-name {
-      font-weight: bold;
-    }
-
-  </style>
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
 </head>
+
 <body>
 
-  <div class="cio-form custom-form-styles">
-
-    <header>
-      <h3>My Super Awesome Form</h3>
-    </header>
-
-    <hr>
-
-    <!-- The following <form> is all you need to get started. It is recommended
-      that you set a class or id to the form to target it via jQuery -->
-    <form id="my-form">
-
-      <!-- Add <input> fields for all the attributes you would like to send to
-        Customer.io. The name="" attribute of the <input> will be the
-        name of your attribute. The value will be whatever the user inputs.
-        One special thing we do here is use the 'email' field as the id for the person
-        in Customer.io. For example  'email@example.com' gets added with the
-        ID 'email_example_com'-->
-      <input name="name" placeholder="Name (Required)" required="" type="text">
-      <input name="email" placeholder="Email (Required)" required="" type="text">
-      <input name="company" placeholder="Company" type="text">
-
-      <textarea name="comments" id="" cols="30" rows="10" placeholder="Comments"></textarea>
-
-      <!-- To submit/send your form to Customer.io, you'll need a submit button,
-        or something with type="submit". We recommend using a <button>. -->
-      <button type="submit">Sign Me Up</button>
-    </form>
-
-    <div class="form-success" id="form-success">
-      Thanks <span class="user-name"></span>! The form was successfully submitted.
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+              <a class="dropdown-item active" href="portfolio-item.html">Single Portfolio Item</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Other Pages
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="404.html">404</a>
+              <a class="dropdown-item" href="pricing.html">Pricing Table</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Portfolio Item
+      <small>Subheading</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Portfolio Item</li>
+    </ol>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+      <div class="col-md-8">
+        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="my-3">Project Description</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+        <h3 class="my-3">Project Details</h3>
+        <ul>
+          <li>Lorem Ipsum</li>
+          <li>Dolor Sit Amet</li>
+          <li>Consectetur</li>
+          <li>Adipiscing Elit</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Related Projects</h3>
+
+    <div class="row">
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="#">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        </a>
+      </div>
+
+    </div>
+    <!-- /.row -->
 
   </div>
+  <!-- /.container -->
 
-  <!-- Include jQuery into your project, as the cioForm requires it -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!-- Include the cioForm.js file. Make sure you include it after you include jQuery -->
-  <script src="http://fast.customer.io/s/jquery.cioForm.js"></script>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-  <!-- Below is the Customer.io Javascript snippet. Make sure you include
-    your own snippet with your unique data-site-id to allow for the data to be
-    sent to your account. -->
-  <script type="text/javascript">
-    var _cio = _cio || [];
-    (function() {
-      var a,b,c;a=function(f){return function(){_cio.push([f].
-      concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
-      "sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
-      var t = document.createElement('script'),
-          s = document.getElementsByTagName('script')[0];
-      t.async = true;
-      t.id    = 'cio-tracker';
-      t.setAttribute('data-site-id', 'YOUR-UNIQUE-KEY-HERE');
-      t.src = 'https://assets.customer.io/assets/track.js';
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
-
-  <script type="text/javascript">
-
-    (function ( $, undefined ) { "use strict";
-
-      // Caching jQuery elements
-      // This step isn't necessary, but it is highly recommended
-      var $myForm = $('#my-form');
-      var $formSuccess = $('#form-success');
-
-      // Basic Implementation
-      // The single line of code below is all you need to get your form working!
-      $myForm.cioForm();
-
-      // Implementation + Customization
-      // In addition to sending the data to Customer.io, we're going to prevent
-      // the page from reloading and show success message. We're also going
-      // to pass the "Name" that the user entered into our success message..
-      // To add a personal touch ;)
-
-      // $myForm.cioForm({
-      //   remote: true,
-      //   success: function( data ) {
-      //     // This hides the form
-      //     this.$el.hide();
-
-      //     // Find the selector to add the user's name into
-      //     $formSuccess.find( ".user-name" )
-      //       // Add in the user's name from our data object
-      //       .text( data.name );
-
-      //     // Show the success message!
-      //     $formSuccess.show();
-
-      //   }
-      // });
-
-    })(jQuery);
-
-  </script>
-
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
